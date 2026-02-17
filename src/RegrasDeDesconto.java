@@ -15,5 +15,18 @@ public class RegrasDeDesconto {
 		} else {
 			System.out.println("O desconto não foi aplicado!");
 		}
+		
+		Ebook ebook = new Ebook(autor);
+		ebook.setValor(29.90);
+		
+		descontoAplicado = ebook.aplicaDescontoDe(0.10);
+		
+		if(!descontoAplicado) {
+			System.out.println("Desconto no ebook não pode ser aplicado!");
+		} else {
+			System.out.println("Desconto aplicado!");
+			System.out.println("Valor: " + ebook.getValor());
+		}
+		
 	}
 }
